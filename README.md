@@ -1,5 +1,5 @@
 # citation-tracker
-The QuEra Citation Tool is a Slack bot that monitors academic papers for new citations using the INSPIRE HEP database. 
+The Citation Tracker is a Slack bot that monitors academic papers for new citations using the INSPIRE HEP database. 
 It allows users to add papers to a tracking list, fetch recent citations, and receive daily updates — all from a designated Slack channel.
 
 The system has two main components:
@@ -48,7 +48,7 @@ cite.mjs:
 
 bot.js:
 - Implements the Slack bot.
-- Wraps core functions from aquilaCite.mjs.
+- Wraps core functions from cite.mjs.
 - Restricts usage to one channel.
 - Runs a monitoring loop with setInterval every 24h.
 
