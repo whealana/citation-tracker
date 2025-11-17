@@ -8,7 +8,7 @@ dotenv.config();
 let isMonitoringActive = false;
 let monitoringInterval = null;
 
-// "papers-citing-quera" channel on Slack
+// Currently "papers-citing-quera" channel on Slack
 const ALLOWED_CHANNEL = process.env.ALLOWED_CHANNEL;
 
 // Builds the Slack application with .env file parameters
@@ -53,7 +53,7 @@ app.command('/checkcitations', async ({ command, ack, say }) => {
     return;
   }
 
-  // Parses the paper ID from the command inputted by user
+  // Parses the paper ID from the command input by the user
   const text = command.text.trim();
   const paperId = text.match(/^\d+$/) ? text : null;
 
@@ -63,7 +63,7 @@ app.command('/checkcitations', async ({ command, ack, say }) => {
   }
 
   await say('Checking citations...');
-  // Calls core functionality from aquilaCite.mjs
+  // Calls core functionality from cite.mjs
   const result = await fetchAndCompareCitations(paperId);
 
   if (!result || result.length === 0) {
@@ -154,7 +154,7 @@ app.command('/getmonitoring', async ({ command, ack, say }) => {
   }
 });
 
-//Begins checking the "tracked papers" for new citations once every 24hr
+//Begins checking the "tracked papers" for new citations once every 24 hours
 app.command('/startmonitor', async ({ command, ack, say }) => {
   await ack();
 
