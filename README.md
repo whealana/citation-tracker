@@ -1,6 +1,6 @@
 # citation-tracker
 The Citation Tracker is a Slack bot that monitors academic papers for new citations using the INSPIRE HEP database. 
-It allows users to add papers to a tracking list, fetch recent citations, and receive daily updates — all from a designated Slack channel.
+It allows users to add papers to a tracking list, fetch recent citations, and receive daily updates - all from a designated Slack channel.
 
 The system has two main components:
 1. Core Citation Engine (`cite.mjs`) – Handles citation fetching, comparison, storage, and paper tracking.
@@ -28,13 +28,13 @@ The bot requires a `.env` file with Slack credentials:
 
 Commands
 Available Commands:
-/help - Displays available commands and usage instructions.
-/checkCitations PAPER_ID - Manually checks for new citations of a given paper.
-/addPaper PAPER_ID - Adds a paper to the tracking list for daily monitoring.
-/removePaper PAPER_ID - Removes a paper from the tracking list.
-/getMonitoring - Lists all currently tracked papers with IDs.
-/startMonitor - Starts the daily monitoring loop (every 24h).
-/stopMonitor - Stops daily monitoring.
+- `/help` - Displays available commands and usage instructions.
+- `/checkCitations PAPER_ID` - Manually checks for new citations of a given paper.
+- `/addPaper PAPER_ID` - Adds a paper to the tracking list for daily monitoring.
+- `/removePaper PAPER_ID` - Removes a paper from the tracking list.
+- `/getMonitoring` - Lists all currently tracked papers with IDs.
+- `/startMonitor` - Starts the daily monitoring loop (every 24h).
+- `/stopMonitor` - Stops daily monitoring.
 
 File Reference
 
